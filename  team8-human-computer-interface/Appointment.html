@@ -22,7 +22,7 @@
 				width: 61%;
 			}
 			#calendar {
-				width: 900px;
+				width: 600px;
 				margin: 0 auto;
 			}
 		</style>
@@ -101,7 +101,7 @@
 						</fieldset>
 						<fieldset>
 							<legend>Register Info</legend>
-							<p>If you do not already have an account, please create a new account to register.</p>
+							<p id="timeSlots" style="display: none"></p>
 						</fieldset>
 					</div>
 				</div>
@@ -284,11 +284,11 @@
 				</div>
 			</div>
 			<div id="dialog-form" title="Select Appointment Time">
-				<div class="container_12">
+				<div class="container_16">
 					<div class="grid_2">
 						<img src="img/doctor.jpg" width="101" height="138" align="top"> 
 					</div>
-					<div class="grid_4">
+					<div class="grid_5">
 						<p>
 							<label>Name: </label>Dr Catherine CHUA
 						</p>
@@ -301,10 +301,6 @@
 						<p>
 							<label>Phone No.: </label>6516 2389 
 						</p>
-					</div>
-					<div class="grid_6"><div id='calendar'></div></div>
-					<div class="clear"></div>						
-					<div class="grid_6">
 						<p><h5>Specialties</h5></p>
 						<p>Family Practice - Board Certified</p>
 						<p><h5>Education</h5></p>
@@ -321,8 +317,9 @@
 						</p>
  						<p><h5>Awards and Recognitions</h5></p>
 						<p>Dr. Chua is a Healthgrades Recognized Doctor</p>
-					
 					</div>
+					<div class="grid_9"><div id="calendar"></div></div>
+					<div class="clear"></div>	
 				</div>
 			</div>
 
@@ -348,18 +345,12 @@
 				$( "#dialog-form" ).dialog({
 					autoOpen: false,
 					height: 600,
-					width: 950,
+					width: 1100,
 					modal: true,
 					buttons: {
 						"Book": function() {
-							if ( bValid ) {
-								$( "#users tbody" ).append( "<tr>" +
-									"<td>" + name.val() + "</td>" +
-									"<td>" + email.val() + "</td>" +
-									"<td>" + password.val() + "</td>" +
-								"</tr>" );
-								$( this ).dialog( "close" );
-							}
+							$("#timeSlots").slideToggle("slow");
+							$( this ).dialog( "close" );
 						},
 						Cancel: function() {
 							$( this ).dialog( "close" );
@@ -373,91 +364,66 @@
 				$( "#opener" )
 					.click(function() {
 						$( "#dialog-form" ).dialog( "open" );
+						var date = new Date();
+						var d = date.getDate();
+						var m = date.getMonth();
+						var y = date.getFullYear();
+						
+						var calendar = $('#calendar').fullCalendar({
+							header: {
+								left: 'next today',
+								center: 'title'
+							},
+							defaultView: 'agendaWeek',
+							selectable: true,
+							selectHelper: true,
+							minTime: '9:00',
+							maxTime: '18:00', 
+							weekends: false,
+							allDaySlot: false,
+							year: y,
+							month: m,
+							date: d+3,
+							select: function(start, end, allDay) {
+								var title = prompt('Please enter NRIC to confirm:');
+								if (title) {
+									calendar.fullCalendar('renderEvent',
+										{
+											id: 999,
+											start: start,
+											title: 'Appointment',
+											end: end,
+											allDay: allDay
+										},
+										true // make the event "stick"
+									);
+										
+								}
+								calendar.fullCalendar('unselect');
+								
+								$( "#timeSlots" ).append('<p>Your booking time is shown as below: </p>' + 
+								$.fullCalendar.formatDate(start,'dd/MMM/yyyy hh:ss'));
+							},
+							editable: false,
+							events: [
+								{
+									id: 999,
+									title: 'Appointment',
+									start: new Date(y, m, d+3, 11, 0),
+									end: new Date(y, m, d+3, 11, 30),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Appointment',
+									start: new Date(y, m, d+2, 16, 0),
+									end: new Date(y, m, d+2, 16, 30),
+									allDay: false
+								}
+							]
+						});
 				});
-			</script>	
-			<script type='text/javascript'>
-
-				$(document).ready(function() {
 				
-					var date = new Date();
-					var d = date.getDate();
-					var m = date.getMonth();
-					var y = date.getFullYear();
-					
-					var calendar = $('#calendar').fullCalendar({
-						header: {
-							left: 'prev,next today',
-							center: 'title',
-							right: 'month,agendaWeek,agendaDay'
-						},
-						selectable: true,
-						selectHelper: true,
-						select: function(start, end, allDay) {
-							var title = prompt('Event Title:');
-							if (title) {
-								calendar.fullCalendar('renderEvent',
-									{
-										title: title,
-										start: start,
-										end: end,
-										allDay: allDay
-									},
-									true // make the event "stick"
-								);
-							}
-							calendar.fullCalendar('unselect');
-						},
-						editable: true,
-						events: [
-							{
-								title: 'All Day Event',
-								start: new Date(y, m, 1)
-							},
-							{
-								title: 'Long Event',
-								start: new Date(y, m, d-5),
-								end: new Date(y, m, d-2)
-							},
-							{
-								id: 999,
-								title: 'Repeating Event',
-								start: new Date(y, m, d-3, 16, 0),
-								allDay: false
-							},
-							{
-								id: 999,
-								title: 'Repeating Event',
-								start: new Date(y, m, d+4, 16, 0),
-								allDay: false
-							},
-							{
-								title: 'Meeting',
-								start: new Date(y, m, d, 10, 30),
-								allDay: false
-							},
-							{
-								title: 'Lunch',
-								start: new Date(y, m, d, 12, 0),
-								end: new Date(y, m, d, 14, 0),
-								allDay: false
-							},
-							{
-								title: 'Birthday Party',
-								start: new Date(y, m, d+1, 19, 0),
-								end: new Date(y, m, d+1, 22, 30),
-								allDay: false
-							},
-							{
-								title: 'Click for Google',
-								start: new Date(y, m, 28),
-								end: new Date(y, m, 29),
-								url: 'http://google.com/'
-							}
-						]
-					});
-					
-				});
-
-			</script>			
+			</script>				
 	</body>
 </html>

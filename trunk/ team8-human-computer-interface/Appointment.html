@@ -10,6 +10,8 @@
 		<link rel="stylesheet" type="text/css" href="css/nav.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="css/nav.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.9.1.custom.min.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/fullcalendar.css" media="screen" />
 		<!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" /><![endif]-->
 		<!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
 		<!--[if lte IE 6]>
@@ -18,6 +20,10 @@
 		<style>
 			fieldset.login p select,#physicians {
 				width: 61%;
+			}
+			#calendar {
+				width: 900px;
+				margin: 0 auto;
 			}
 		</style>
 	</head>
@@ -125,7 +131,7 @@
 									<label>Health Physicians: </label>
 									<table id = "physicians" style="display: none">
 										<tr>
-											<th>Dr Catherine CHUA </th>
+											<th><a href="#" id="opener">Dr Catherine CHUA</a></th>
 											<td>Director of UHC</td>
 											<td class="currency">6516 2389</td>
 										</tr>
@@ -277,8 +283,54 @@
 					<p>© Copyright 2001-2012 National University of Singapore. All Rights Reserved. </p>
 				</div>
 			</div>
+			<div id="dialog-form" title="Select Appointment Time">
+				<div class="container_12">
+					<div class="grid_2">
+						<img src="img/doctor.jpg" width="101" height="138" align="top"> 
+					</div>
+					<div class="grid_4">
+						<p>
+							<label>Name: </label>Dr Catherine CHUA
+						</p>
+						<p>
+							<label>Age: </label>39
+						</p>
+						<p>
+							<label>Email: </label>uhchead@nus.edu.sg
+						</p>
+						<p>
+							<label>Phone No.: </label>6516 2389 
+						</p>
+					</div>
+					<div class="grid_6"><div id='calendar'></div></div>
+					<div class="clear"></div>						
+					<div class="grid_6">
+						<p><h5>Specialties</h5></p>
+						<p>Family Practice - Board Certified</p>
+						<p><h5>Education</h5></p>
+						<p>Graduated in 2001, West Virginia School of Osteopathic Medicine</p>
+						<p><h5>Procedures Performed</h5></p>
+						<p>
+							<ul>
+								<li>Colonoscopy</li>
+								<li>Hemorrhoidectomy</li>
+								<li>Esophagoscopy</li>
+								<li>Esophagogastroduodenoscopy</li>
+								<li>Cesarean Section</li>
+							</ul>
+						</p>
+ 						<p><h5>Awards and Recognitions</h5></p>
+						<p>Dr. Chua is a Healthgrades Recognized Doctor</p>
+					
+					</div>
+				</div>
+			</div>
+
 			<!-- The JavaScript -->
 			<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+			<script type="text/javascript" src="js/jquery-ui-1.9.1.custom.min.js"></script>
+			<script type="text/javascript" src="js/fullcalendar.min.js"></script>
+			
 			<script type="text/javascript">
 				$("#toggle-forms").click(function () {
 				  $("#forms").slideToggle("slow");
@@ -292,7 +344,119 @@
 				  $("#physicians").slideDown("fast");
 
 				});
-			
+				
+				$( "#dialog-form" ).dialog({
+					autoOpen: false,
+					height: 600,
+					width: 950,
+					modal: true,
+					buttons: {
+						"Book": function() {
+							if ( bValid ) {
+								$( "#users tbody" ).append( "<tr>" +
+									"<td>" + name.val() + "</td>" +
+									"<td>" + email.val() + "</td>" +
+									"<td>" + password.val() + "</td>" +
+								"</tr>" );
+								$( this ).dialog( "close" );
+							}
+						},
+						Cancel: function() {
+							$( this ).dialog( "close" );
+						}
+					},
+					close: function() {
+						$( this ).dialog( "close" );
+					}
+				});
+		 
+				$( "#opener" )
+					.click(function() {
+						$( "#dialog-form" ).dialog( "open" );
+				});
+			</script>	
+			<script type='text/javascript'>
+
+				$(document).ready(function() {
+				
+					var date = new Date();
+					var d = date.getDate();
+					var m = date.getMonth();
+					var y = date.getFullYear();
+					
+					var calendar = $('#calendar').fullCalendar({
+						header: {
+							left: 'prev,next today',
+							center: 'title',
+							right: 'month,agendaWeek,agendaDay'
+						},
+						selectable: true,
+						selectHelper: true,
+						select: function(start, end, allDay) {
+							var title = prompt('Event Title:');
+							if (title) {
+								calendar.fullCalendar('renderEvent',
+									{
+										title: title,
+										start: start,
+										end: end,
+										allDay: allDay
+									},
+									true // make the event "stick"
+								);
+							}
+							calendar.fullCalendar('unselect');
+						},
+						editable: true,
+						events: [
+							{
+								title: 'All Day Event',
+								start: new Date(y, m, 1)
+							},
+							{
+								title: 'Long Event',
+								start: new Date(y, m, d-5),
+								end: new Date(y, m, d-2)
+							},
+							{
+								id: 999,
+								title: 'Repeating Event',
+								start: new Date(y, m, d-3, 16, 0),
+								allDay: false
+							},
+							{
+								id: 999,
+								title: 'Repeating Event',
+								start: new Date(y, m, d+4, 16, 0),
+								allDay: false
+							},
+							{
+								title: 'Meeting',
+								start: new Date(y, m, d, 10, 30),
+								allDay: false
+							},
+							{
+								title: 'Lunch',
+								start: new Date(y, m, d, 12, 0),
+								end: new Date(y, m, d, 14, 0),
+								allDay: false
+							},
+							{
+								title: 'Birthday Party',
+								start: new Date(y, m, d+1, 19, 0),
+								end: new Date(y, m, d+1, 22, 30),
+								allDay: false
+							},
+							{
+								title: 'Click for Google',
+								start: new Date(y, m, 28),
+								end: new Date(y, m, 29),
+								url: 'http://google.com/'
+							}
+						]
+					});
+					
+				});
 
 			</script>			
 	</body>

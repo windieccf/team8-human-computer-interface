@@ -1,0 +1,616 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>University Health Centre | Insurance Schemes</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/text.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/grid.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/layout.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/nav.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/nav.css" media="screen" />
+		<!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
+		<!--[if lte IE 6]>
+             <link rel="stylesheet" href="css/styleIE6.css" type="text/css" media="screen"/>
+        <![endif]-->
+		<style>
+            ul.menu li a {
+				border-bottom: 0px;
+				padding: 0px 0px;
+				display: inline;
+			}
+			ul.menu ul li a {
+				padding-left: 0px;
+			}
+			ul.menu li a:hover {
+				background:#333;
+			}
+			ul.menu > li ul li a:hover{
+				border-bottom:1px dotted #fff;
+				background:none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container_16">
+			<div class="grid_16">
+				<h1 id="branding">
+					<img src="img/NUS.jpg" width="951" height="85" align="top">
+				</h1>
+			</div>
+			<div class="clear"></div>
+			<div class="grid_16">
+				<ul class="nav main">
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">About</a>
+					</li>
+					<li>
+						<a href="#">Services</a>
+					</li>
+					<li>
+						<a href="#">Insurance Schemes</a>
+					</li>
+					<li>
+						<a href="#">Fees & Charges</a>
+					</li>
+					<li>
+						<a href="#">Health Matters</a>
+					</li>
+					<li class="secondary">
+						<a href="http://960.gs/">中文</a>
+					</li>
+					<li class="secondary">
+						<a href="http://960.gs/">English</a>
+					</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+			<div class="grid_12">
+				<h2 id="page-heading">University Health Centre > Insurance Schemes</h2>
+			</div>
+			<div class="grid_4"><h2 id="page-heading">
+				<form method="get" action="" class="search">
+						<input class="search text" name="value" type="text" />
+						<img src="img/search.png" width="20" height="20" align="top"> 
+				</form></h2>
+			</div>
+			<div class="clear"></div>
+			<div class="grid_4">
+				<div class="box">
+					<h2>Introduction</h2>
+					<div class="block">
+						<p>Pre-entrance medical examinations are required for all students entering the University.</p>
+						<p>
+							<b>Eligibility</b>
+							<br/>All full time matriculated students reading for a first degree, including an honours degree, graduate and non-graduating are obliged to subscribe to the University’s medical insurance scheme. 
+							<br/><br/>Different schemes are offered for local, international undergraduate, graduate and non-graduating students. Medical benefits are extended throughout the course of study in Singapore only.
+							<br/><br/>Benefits cease immediately and students are no longer eligible to subscribe to the scheme when they:
+							<br/><br/>1) pass their final examination and complete their course
+							<br/>2) cease to be full-time students (covert to part-time) 
+							<br/>3) are on term Leave of Absence 
+							<br/>4) withdraw 
+							<br/>5) are terminated 
+							<br/>6) reach age 65
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="grid_12">
+				<div class="box" id="kwick-box">
+					<h2>Insurance Categories</h2>
+					<div id="kwick">
+						<ul class="kwicks">
+							<li>
+								<a class="kwick one" href="#" id="selectBasic" onclick="displayBenifit('basic')">
+									<!--span>Basic</span-->
+									<img src="img/Basic.jpg" align="center" width="480" height="100">
+								</a>
+							</li>
+							<li>
+								<a class="kwick two" href="#" id="selectAdvantage" onclick="displayBenifit('advantage')">
+									<!--span>Advantage</span-->
+									<img src="img/Advantage.jpg" align="center" width="480" height="100">
+								</a>
+							</li>
+							<li>
+								<a class="kwick three" href="#" id="selectPreferred" onclick="displayBenifit('preferred')">
+									<!--span>Preferred</span-->
+									<img src="img/Preferred.jpg" align="center" width="480" height="100">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="block" id="tables">
+						<table id = "basic_benifit" style="display: none">
+							<caption><h5>Basic Plan</h5></caption>
+							<thead>
+								<tr>
+									<th width="50%">Benifit</th>
+									<th>Limits of Compensation</th>
+								</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<th>In-patient Hospital Treatment</th>
+								<th>(Government/Restructured Hospital for B1 ward & below)</th>
+							</tr>
+							<tr class="odd">
+								<td>Room, Board & Medical Related Services</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Intensive Care Unit (ICU) & Medical Related Services</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Surgical Limits (including Day Surgery)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Pre-Hospital Specialist’s Consultation (leads to hospitalisation within 90 days)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Pre-Hospital Diagnostic & Laboratory Services (leads to hospitalisation within 90 days)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Post-Hospitalisation Treatment (max. 90 days after discharge)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Surgical Implants</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Gamma Knife/Novalis Radiosurgery</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Emergency Hospitalisation Outside Singapore</td>
+								<td>As charged, pegged to costs of B1 ward in S’pore Restructured Hospitals</td>
+							</tr>
+							<tr class="odd">
+								<td>Accident In-patient Dental Treatment</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Ward Entitlement</td>
+								<td>Class B1 and Below</td>
+							</tr>
+							<tr class="odd">
+								<td>Confinement in Community Hospital (max. 90 days)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>In-patient Psychiatric Treatment</td>
+								<td>$3,000</td>
+							</tr>
+							<tr class="odd">
+								<td>Pregnancy Complications Benefit</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Congenital Abnormalities Benefit</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Organ Transplant Benefit (including Stem Cell Transplant)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Living Organ Donor Transplant Benefit (per Transplant)</td>
+								<td>$20,000</td>
+							</tr>
+							<tr>
+								<th>Out-patient Hospital Treatment</th>
+								<th></th>
+							</tr>
+							<tr class="odd">
+								<td>Stereotactic Radiotherapy for Cancer</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Radiotherapy for cancer</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Chemotherapy for cancer</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Immunotherapy for cancer</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Renal Dialysis</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Erythropoietin drug for chronic renal failure</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Cyclosporin/Tacrolimus drug for organ transplant</td>
+								<td>As charged</th>
+							</tr>
+							<tr>
+								<th>Pro-Ration Factor</th>
+								<th></th>
+							</tr>
+							<tr class="odd">
+								<td>Private Hospital/Private Medical Institutions</td>
+								<td>50%</th>
+							</tr>
+							<tr class="odd">
+								<td>Restructured Hospitals – Class A</td>
+								<td>85%</th>
+							</tr>
+							<tr class="odd">
+								<td>Restructured Hospitals – Class B and below</td>
+								<td>N.A</th>
+							</tr>
+							<tr>
+								<th>Overall</th>
+								<th></th>
+							</tr>
+							<tr class="odd">
+								<td>Limit per Semester</td>
+								<td>$50,000</th>
+							</tr>
+							</tbody>
+						</table>
+						<table id = "basic_fee" style="display: none">
+							<tr>
+								<td width="50%">
+									<p><img src="img/icon_sg.jpg" align="center" width="35" height="35">&nbsp;&nbsp;<font style="font-size:150%"><b>Local</b></font></p>
+									<p>Full-time Singaporean (citizens and Permanent Residents) undergraduate students are required to subscribe to this scheme. The fee is <b>S$15.00</b> for each semester.</p>
+								</td>
+								<td>
+									<p><img src="img/icon_intl.jpg" align="center" width="35" height="35">&nbsp;&nbsp;<font style="font-size:150%"><b>International</b></font></p>
+									<p>Full-time international undergraduate students are required to subscribe to this scheme. The fee is <b>S$35.00</b> for each semester.</p>
+								</td>
+							</tr>
+						</table>
+						<table id = "advantage_benifit" style="display: none">
+							<caption><h5>Advantage Plan</h5></caption>
+							<thead>
+								<tr>
+									<th width="50%">Benifit</th>
+									<th>Limits of Compensation</th>
+								</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<th>In-patient Hospital Treatment</th>
+								<th>(Government/Restructured Hospital for A ward & below)</th>
+							</tr>
+							<tr class="odd">
+								<td>Room, Board & Medical Related Services</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Intensive Care Unit (ICU) & Medical Related Services</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Surgical Limits (including Day Surgery)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Pre-Hospital Specialist’s Consultation (leads to hospitalisation within 90 days)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Pre-Hospital Diagnostic & Laboratory Services (leads to hospitalisation within 90 days)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Post-Hospitalisation Treatment (max. 90 days after discharge)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Surgical Implants</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Gamma Knife/Novalis Radiosurgery</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Emergency Hospitalisation Outside Singapore</td>
+								<td>As charged, pegged to costs of S’pore Restructured Hospitals</td>
+							</tr>
+							<tr class="odd">
+								<td>Accident In-patient Dental Treatment</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Ward Entitlement</td>
+								<td>Class A and Below</td>
+							</tr>
+							<tr class="odd">
+								<td>Confinement in Community Hospital (max. 90 days)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>In-patient Psychiatric Treatment</td>
+								<td>$5,000</td>
+							</tr>
+							<tr class="odd">
+								<td>Pregnancy Complications Benefit</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Congenital Abnormalities Benefit</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Organ Transplant Benefit (including Stem Cell Transplant)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Living Organ Donor Transplant Benefit (per Transplant)</td>
+								<td>$40,000</td>
+							</tr>
+							<tr>
+								<th>Out-patient Hospital Treatment</th>
+								<th></th>
+							</tr>
+							<tr class="odd">
+								<td>Stereotactic Radiotherapy for Cancer</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Radiotherapy for cancer</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Chemotherapy for cancer</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Immunotherapy for cancer</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Renal Dialysis</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Erythropoietin drug for chronic renal failure</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Cyclosporin/Tacrolimus drug for organ transplant</td>
+								<td>As charged</th>
+							</tr>
+							<tr>
+								<th>Pro-Ration Factor</th>
+								<th></th>
+							</tr>
+							<tr class="odd">
+								<td>Private Hospital/Private Medical Institutions</td>
+								<td>65%</th>
+							</tr>
+							<tr class="odd">
+								<td>Restructured Hospitals – Class A</td>
+								<td>N.A</th>
+							</tr>
+							<tr class="odd">
+								<td>Restructured Hospitals – Class B and below</td>
+								<td>N.A</th>
+							</tr>
+							<tr>
+								<th>Overall</th>
+								<th></th>
+							</tr>
+							<tr class="odd">
+								<td>Limit per Semester</td>
+								<td>$80,000</th>
+							</tr>
+							</tbody>
+						</table>
+						<table id = "advantage_fee" style="display: none">
+							<tr>
+								<td width="50%">
+									<p><img src="img/icon_sg.jpg" align="center" width="35" height="35">&nbsp;&nbsp;<font style="font-size:150%"><b>Local</b></font></p>
+									<p>Full-time Singaporean (citizens and Permanent Residents) undergraduate students are required to subscribe to this scheme. The fee is <b>S$30.00</b> for each semester.</p>
+								</td>
+								<td>
+									<p><img src="img/icon_intl.jpg" align="center" width="35" height="35">&nbsp;&nbsp;<font style="font-size:150%"><b>International</b></font></p>
+									<p>Full-time international undergraduate students are required to subscribe to this scheme. The fee is <b>S$70.00</b> for each semester.</p>
+								</td>
+							</tr>
+						</table>
+						<table id = "preferred_benifit" style="display: none">
+							<caption><h5>Preferred Plan</h5></caption>
+							<thead>
+								<tr>
+									<th width="50%">Benifit</th>
+									<th>Limits of Compensation</th>
+								</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<th>In-patient Hospital Treatment</th>
+								<th>(Private Hospital/Private Medical Institutions)</th>
+							</tr>
+							<tr class="odd">
+								<td>Room, Board & Medical Related Services</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Intensive Care Unit (ICU) & Medical Related Services</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Surgical Limits (including Day Surgery)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Pre-Hospital Specialist’s Consultation (leads to hospitalisation within 90 days)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Pre-Hospital Diagnostic & Laboratory Services (leads to hospitalisation within 90 days)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Post-Hospitalisation Treatment (max. 90 days after discharge)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Surgical Implants</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Gamma Knife/Novalis Radiosurgery</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Emergency Hospitalisation Outside Singapore</td>
+								<td>As charged, pegged to costs of S’pore Private Hospitals</td>
+							</tr>
+							<tr class="odd">
+								<td>Accident In-patient Dental Treatment</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Ward Entitlement</td>
+								<td>Standard Room In Private Hospital</td>
+							</tr>
+							<tr class="odd">
+								<td>Confinement in Community Hospital (max. 90 days)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>In-patient Psychiatric Treatment</td>
+								<td>$5,000</td>
+							</tr>
+							<tr class="odd">
+								<td>Pregnancy Complications Benefit</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Congenital Abnormalities Benefit</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Organ Transplant Benefit (including Stem Cell Transplant)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Living Organ Donor Transplant Benefit (per Transplant)</td>
+								<td>$60,000</td>
+							</tr>
+							<tr>
+								<th>Out-patient Hospital Treatment</th>
+								<th></th>
+							</tr>
+							<tr class="odd">
+								<td>Stereotactic Radiotherapy for Cancer</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Radiotherapy for cancer</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Chemotherapy for cancer</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Immunotherapy for cancer</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Renal Dialysis</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Erythropoietin drug for chronic renal failure</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Cyclosporin/Tacrolimus drug for organ transplant</td>
+								<td>As charged</th>
+							</tr>
+							<tr>
+								<th>Pro-Ration Factor</th>
+								<th></th>
+							</tr>
+							<tr class="odd">
+								<td>Private Hospital/Private Medical Institutions</td>
+								<td>N.A</th>
+							</tr>
+							<tr class="odd">
+								<td>Restructured Hospitals – Class A</td>
+								<td>N.A</th>
+							</tr>
+							<tr class="odd">
+								<td>Restructured Hospitals – Class B and below</td>
+								<td>N.A</th>
+							</tr>
+							<tr>
+								<th>Overall</th>
+								<th></th>
+							</tr>
+							<tr class="odd">
+								<td>Limit per Semester</td>
+								<td>$100,000</th>
+							</tr>
+							</tbody>
+						</table>
+						<table id = "preferred_fee" style="display: none">
+							<tr>
+								<td width="50%">
+									<p><img src="img/icon_sg.jpg" align="center" width="35" height="35">&nbsp;&nbsp;<font style="font-size:150%"><b>Local</b></font></p>
+									<p>Full-time Singaporean (citizens and Permanent Residents) undergraduate students are required to subscribe to this scheme. The fee is <b>S$50.00</b> for each semester.</p>
+								</td>
+								<td>
+									<p><img src="img/icon_intl.jpg" align="center" width="35" height="35">&nbsp;&nbsp;<font style="font-size:150%"><b>International</b></font></p>
+									<p>Full-time international undergraduate students are required to subscribe to this scheme. The fee is <b>S$120.00</b> for each semester.</p>
+								</td>
+							</tr>
+						</table>
+						<p id="noteArea" style="text-indent:1em;display: none;"><font style="font-size:120%;"><b>Note:</b></font> It will be included in the Miscellaneous Fees of the student bill on a semester basis.</p>
+						<p id="applyBtn" align="center" style="display: none"><input type="submit" value="Apply" /></p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="clear"></div>					
+			<div class="grid_16" id="site_info">
+				<div class="box">
+					<p>© Copyright 2001-2012 National University of Singapore. All Rights Reserved. </p>
+				</div>
+			</div>
+			<!-- The JavaScript -->
+			<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+			<script type="text/javascript" src="js/jquery-ui-1.9.1.custom.min.js"></script>
+			<script type="text/javascript" src="js/jquery.bgpos.js"></script>
+			<script type="text/javascript" src="js/mootools-1.2.1-core.js"></script>
+			<script type="text/javascript" src="js/mootools-1.2-more.js"></script>
+			<script type="text/javascript" src="js/mootools-fluid16-autoselect.js"></script>
+			<script type="text/javascript">
+				function displayBenifit(name){
+					$("basic_benifit").style.display='none';
+					$("advantage_benifit").style.display='none';
+					$("preferred_benifit").style.display='none';
+					$("basic_fee").style.display='none';
+					$("advantage_fee").style.display='none';
+					$("preferred_fee").style.display='none';
+					$(name+'_benifit').style.display='';
+					$(name+'_fee').style.display='';
+					$('applyBtn').style.display='';
+					$('noteArea').style.display='';
+				}
+			</script>			
+	</body>
+</html>

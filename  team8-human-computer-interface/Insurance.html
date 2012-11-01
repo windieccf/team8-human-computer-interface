@@ -31,6 +31,10 @@
 				border-bottom:1px dotted #fff;
 				background:none;
 			}
+			
+			#kwickLast {
+				width: 400px;
+			}
 		</style>
 	</head>
 	<body>
@@ -51,6 +55,14 @@
 					</li>
 					<li>
 						<a href="#">Services</a>
+						<ul>
+							<li>
+								<a href="#">Appointment</a>
+							</li>
+							<li>
+								<a href="#">Medical Examination</a>
+							</li>
+						</ul>
 					</li>
 					<li>
 						<a href="#">Insurance Schemes</a>
@@ -71,7 +83,8 @@
 			</div>
 			<div class="clear"></div>
 			<div class="grid_12">
-				<h2 id="page-heading">University Health Centre > Insurance Schemes</h2>
+				<br/>
+				<h5 id="page-heading">University Health Centre > Insurance Schemes</h5>
 			</div>
 			<div class="grid_4"><h2 id="page-heading">
 				<form method="get" action="" class="search">
@@ -107,20 +120,26 @@
 						<ul class="kwicks">
 							<li>
 								<a class="kwick one" href="#" id="selectBasic" onclick="displayBenifit('basic')">
-									<!--span>Basic</span-->
-									<img src="img/Basic.jpg" align="center" width="480" height="100">
+									<span>Basic</span>
+									<img src="img/Basic.jpg" align="center" width="400" height="175">
 								</a>
 							</li>
 							<li>
 								<a class="kwick two" href="#" id="selectAdvantage" onclick="displayBenifit('advantage')">
-									<!--span>Advantage</span-->
-									<img src="img/Advantage.jpg" align="center" width="480" height="100">
+									<span>Advantage</span>
+									<img src="img/Advantage.jpg" align="center" width="400" height="175">
 								</a>
 							</li>
 							<li>
 								<a class="kwick three" href="#" id="selectPreferred" onclick="displayBenifit('preferred')">
-									<!--span>Preferred</span-->
-									<img src="img/Preferred.jpg" align="center" width="480" height="100">
+									<span>Preferred</span>
+									<img src="img/Preferred.jpg" align="center" width="400" height="175">
+								</a>
+							</li>
+							<li>
+								<a class="kwick four" id="kwickLast" href="#">
+									<span>Full Coverage</span>
+									<img src="img/Coverage.jpg" align="center" width="400" height="175">
 								</a>
 							</li>
 						</ul>

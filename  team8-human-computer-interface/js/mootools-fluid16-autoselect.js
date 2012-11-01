@@ -39,7 +39,7 @@ window.addEvent('domready', function() {
 			kwick.addEvent('mouseenter', function(e){
 				var obj = {};
 				obj[i] = {
-					'width': [kwick.getStyle('width').toInt(), 485]
+					'width': [kwick.getStyle('width').toInt(), 385]
 				};
 				kwicks.each(function(other, j){
 					if (other != kwick){
@@ -54,7 +54,7 @@ window.addEvent('domready', function() {
 		$('kwick').addEvent('mouseleave', function(e){
 			var obj = {};
 			kwicks.each(function(other, j){
-				obj[j] = {'width': [other.getStyle('width').toInt(), 215]};
+				obj[j] = {'width': [other.getStyle('width').toInt(), 195]};
 			});
 			fx.start(obj);
 		});

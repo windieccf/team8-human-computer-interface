@@ -137,7 +137,7 @@
 								</a>
 							</li>
 							<li>
-								<a class="kwick four" id="kwickLast" href="#">
+								<a class="kwick four" href="#" id="selectFull" onclick="displayBenifit('full')">
 									<span>Full Coverage</span>
 									<img src="img/Coverage.jpg" align="center" width="400" height="175">
 								</a>
@@ -307,6 +307,157 @@
 							<tbody>
 							<tr>
 								<th>In-patient Hospital Treatment</th>
+								<th>(Government/Restructured Hospital for B1 ward & below)</th>
+							</tr>
+							<tr class="odd">
+								<td>Room, Board & Medical Related Services</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Intensive Care Unit (ICU) & Medical Related Services</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Surgical Limits (including Day Surgery)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Pre-Hospital Specialist’s Consultation (leads to hospitalisation within 90 days)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Pre-Hospital Diagnostic & Laboratory Services (leads to hospitalisation within 90 days)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Post-Hospitalisation Treatment (max. 90 days after discharge)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Surgical Implants</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Gamma Knife/Novalis Radiosurgery</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Emergency Hospitalisation Outside Singapore</td>
+								<td>As charged, pegged to costs of B1 ward in S’pore Restructured Hospitals</td>
+							</tr>
+							<tr class="odd">
+								<td>Accident In-patient Dental Treatment</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Ward Entitlement</td>
+								<td>Class A and Below</td>
+							</tr>
+							<tr class="odd">
+								<td>Confinement in Community Hospital (max. 90 days)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>In-patient Psychiatric Treatment</td>
+								<td>$4,000</td>
+							</tr>
+							<tr class="odd">
+								<td>Pregnancy Complications Benefit</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Congenital Abnormalities Benefit</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Organ Transplant Benefit (including Stem Cell Transplant)</td>
+								<td>As charged</td>
+							</tr>
+							<tr class="odd">
+								<td>Living Organ Donor Transplant Benefit (per Transplant)</td>
+								<td>$30,000</td>
+							</tr>
+							<tr>
+								<th>Out-patient Hospital Treatment</th>
+								<th></th>
+							</tr>
+							<tr class="odd">
+								<td>Stereotactic Radiotherapy for Cancer</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Radiotherapy for cancer</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Chemotherapy for cancer</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Immunotherapy for cancer</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Renal Dialysis</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Erythropoietin drug for chronic renal failure</td>
+								<td>As charged</th>
+							</tr>
+							<tr class="odd">
+								<td>Cyclosporin/Tacrolimus drug for organ transplant</td>
+								<td>As charged</th>
+							</tr>
+							<tr>
+								<th>Pro-Ration Factor</th>
+								<th></th>
+							</tr>
+							<tr class="odd">
+								<td>Private Hospital/Private Medical Institutions</td>
+								<td>65%</th>
+							</tr>
+							<tr class="odd">
+								<td>Restructured Hospitals – Class A</td>
+								<td>95%</th>
+							</tr>
+							<tr class="odd">
+								<td>Restructured Hospitals – Class B and below</td>
+								<td>N.A</th>
+							</tr>
+							<tr>
+								<th>Overall</th>
+								<th></th>
+							</tr>
+							<tr class="odd">
+								<td>Limit per Semester</td>
+								<td>$80,000</th>
+							</tr>
+							</tbody>
+						</table>
+						<table id = "advantage_fee" style="display: none">
+							<tr>
+								<td width="50%">
+									<p><img src="img/icon_sg.jpg" align="center" width="35" height="35">&nbsp;&nbsp;<font style="font-size:150%"><b>Local</b></font></p>
+									<p>Full-time Singaporean (citizens and Permanent Residents) undergraduate students are required to subscribe to this scheme. The fee is <b>S$25.00</b> for each semester.</p>
+								</td>
+								<td>
+									<p><img src="img/icon_intl.jpg" align="center" width="35" height="35">&nbsp;&nbsp;<font style="font-size:150%"><b>International</b></font></p>
+									<p>Full-time international undergraduate students are required to subscribe to this scheme. The fee is <b>S$60.00</b> for each semester.</p>
+								</td>
+							</tr>
+						</table>
+						<table id = "preferred_benifit" style="display: none">
+							<caption><h5>Preferred Plan</h5></caption>
+							<thead>
+								<tr>
+									<th width="50%">Benifit</th>
+									<th>Limits of Compensation</th>
+								</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<th>In-patient Hospital Treatment</th>
 								<th>(Government/Restructured Hospital for A ward & below)</th>
 							</tr>
 							<tr class="odd">
@@ -415,7 +566,7 @@
 							</tr>
 							<tr class="odd">
 								<td>Private Hospital/Private Medical Institutions</td>
-								<td>65%</th>
+								<td>80%</th>
 							</tr>
 							<tr class="odd">
 								<td>Restructured Hospitals – Class A</td>
@@ -431,24 +582,24 @@
 							</tr>
 							<tr class="odd">
 								<td>Limit per Semester</td>
-								<td>$80,000</th>
+								<td>$100,000</th>
 							</tr>
 							</tbody>
 						</table>
-						<table id = "advantage_fee" style="display: none">
+						<table id = "preferred_fee" style="display: none">
 							<tr>
 								<td width="50%">
 									<p><img src="img/icon_sg.jpg" align="center" width="35" height="35">&nbsp;&nbsp;<font style="font-size:150%"><b>Local</b></font></p>
-									<p>Full-time Singaporean (citizens and Permanent Residents) undergraduate students are required to subscribe to this scheme. The fee is <b>S$30.00</b> for each semester.</p>
+									<p>Full-time Singaporean (citizens and Permanent Residents) undergraduate students are required to subscribe to this scheme. The fee is <b>S$40.00</b> for each semester.</p>
 								</td>
 								<td>
 									<p><img src="img/icon_intl.jpg" align="center" width="35" height="35">&nbsp;&nbsp;<font style="font-size:150%"><b>International</b></font></p>
-									<p>Full-time international undergraduate students are required to subscribe to this scheme. The fee is <b>S$70.00</b> for each semester.</p>
+									<p>Full-time international undergraduate students are required to subscribe to this scheme. The fee is <b>S$95.00</b> for each semester.</p>
 								</td>
 							</tr>
 						</table>
-						<table id = "preferred_benifit" style="display: none">
-							<caption><h5>Preferred Plan</h5></caption>
+						<table id = "full_benifit" style="display: none">
+							<caption><h5>Full Coverage Plan</h5></caption>
 							<thead>
 								<tr>
 									<th width="50%">Benifit</th>
@@ -582,19 +733,19 @@
 							</tr>
 							<tr class="odd">
 								<td>Limit per Semester</td>
-								<td>$100,000</th>
+								<td>$150,000</th>
 							</tr>
 							</tbody>
 						</table>
-						<table id = "preferred_fee" style="display: none">
+						<table id = "full_fee" style="display: none">
 							<tr>
 								<td width="50%">
 									<p><img src="img/icon_sg.jpg" align="center" width="35" height="35">&nbsp;&nbsp;<font style="font-size:150%"><b>Local</b></font></p>
-									<p>Full-time Singaporean (citizens and Permanent Residents) undergraduate students are required to subscribe to this scheme. The fee is <b>S$50.00</b> for each semester.</p>
+									<p>Full-time Singaporean (citizens and Permanent Residents) undergraduate students are required to subscribe to this scheme. The fee is <b>S$60.00</b> for each semester.</p>
 								</td>
 								<td>
 									<p><img src="img/icon_intl.jpg" align="center" width="35" height="35">&nbsp;&nbsp;<font style="font-size:150%"><b>International</b></font></p>
-									<p>Full-time international undergraduate students are required to subscribe to this scheme. The fee is <b>S$120.00</b> for each semester.</p>
+									<p>Full-time international undergraduate students are required to subscribe to this scheme. The fee is <b>S$140.00</b> for each semester.</p>
 								</td>
 							</tr>
 						</table>
@@ -622,9 +773,11 @@
 					$("basic_benifit").style.display='none';
 					$("advantage_benifit").style.display='none';
 					$("preferred_benifit").style.display='none';
+					$("full_benifit").style.display='none';
 					$("basic_fee").style.display='none';
 					$("advantage_fee").style.display='none';
 					$("preferred_fee").style.display='none';
+					$("full_fee").style.display='none';
 					$(name+'_benifit').style.display='';
 					$(name+'_fee').style.display='';
 					$('applyBtn').style.display='';

@@ -63,7 +63,7 @@ h2#page-heading {
 	font-weight:normal;
 	padding:.5em;
 	margin:0 0 10px 0;
-	border-bottom:1px solid #ccc;
+	/*--border-bottom:1px solid #ccc;-- */
 }
 
 
@@ -484,7 +484,6 @@ input.search.button {
 #kwick .kwicks {
 	display: block;
 	background: #999;
-	height: 120px;
 	list-style:none;
 	margin:0;
 	overflow:hidden;
@@ -498,11 +497,12 @@ input.search.button {
 	display: block;
 	cursor: pointer;
 	overflow: hidden;
-	height: 100px;
-	width: 215px;
+	height: 200px;
+	width: 195px;
 	padding: 10px;
 	background: #fff;
 }
+
 #kwick .kwick span {
 	color:#fff;
 }

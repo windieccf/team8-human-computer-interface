@@ -280,7 +280,7 @@
 									<label>Email Address: </label>
 									<input type="text" name="email" value="" />
 								</p>
-								<input type="submit" value="Register" class="register-button" />
+								<input type="submit" value="Booking" class="register-button" />
 							</fieldset>
 						</form>
 					</div>
@@ -340,10 +340,14 @@
 			<script type="text/javascript">
 				$("#toggle-forms").click(function () {
 				  $("#forms").slideToggle("slow");
+				  if($("#toggle-forms").hasClass("hidden")) {$("#toggle-forms").removeClass("hidden");}
+				  else{$("#toggle-forms").addClass("hidden");}
 				});
 				
 				$("#toggle-login-forms").click(function () {
 				  $("#login-forms").slideToggle("slow");
+				  if($("#toggle-login-forms").hasClass("hidden")) {$("#toggle-login-forms").removeClass("hidden");}
+				  else{$("#toggle-login-forms").addClass("hidden");}
 				});
 				
 				$("#select-services").change(function () {
@@ -363,10 +367,12 @@
 						},
 						Cancel: function() {
 							$( this ).dialog( "close" );
+							$('#calendar').fullCalendar( 'destroy' )
 						}
 					},
 					close: function() {
 						$( this ).dialog( "close" );
+						$('#calendar').fullCalendar( 'destroy' )
 					}
 				});
 		 

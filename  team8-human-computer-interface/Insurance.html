@@ -117,12 +117,14 @@
 						<a href="#" id="toggle-paragraphs">Chatting or Leaving Message</a>
 					</h2>
 					<div class="block" id="paragraphs">
-						<fieldset style="height: 200px;">
+						<fieldset style="height: 280px;">
+							<div id="chatArea">
 							<p><b>A0079902X: </b>May I check with you what kinds of insurance the school can provide?</p>
 							<p><b>Consultant: </b>Please refer to the categories in the right side of this page.</p>
+							</div>
 						</fieldset>
-						<textarea cols="28" rows="3" style="resize: none;">Any special offer?</textarea>
-						<p align="right"><input type="submit" value="Send" /></p>
+						<textarea id="sendContent" rows="3" style="resize: none; width: 100%">Any special offer?</textarea>
+						<p align="right"><input type="submit" value="Send" onclick="sendMsg()" /></p>
 					</div>
 				</div>
 			</div>
@@ -795,6 +797,11 @@
 					$(name+'_fee').style.display='';
 					$('applyBtn').style.display='';
 					$('noteArea').style.display='';
+				}
+
+				function sendMsg(){
+					$("chatArea").innerHTML = $("chatArea").innerHTML + "<p><b>A0079902X:</b> " + $("sendContent").value + "</p>";
+					$("sendContent").value = '';
 				}
 			</script>			
 	</body>

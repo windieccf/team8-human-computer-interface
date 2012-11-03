@@ -4,11 +4,12 @@ Grey Box Method - Layout CSS
 ----------------------------------------------- */
 
 body {
-	background: #eee;
+	background-image: url("../img/backgounrd.jpg");
 	border-top: 5px solid #000;
 	color: #333;
 	font-size: 11px;
 	padding: 0 0 40px;
+	background-repeat: no-repeat;
 }
 
 
@@ -26,11 +27,11 @@ a:hover {
 
 /* 960 grid system container background
 ----------------------------------------------- */
-.container_12,
+/*.container_12,
 .container_16 {
 	background:#fff;
 }
-
+*/
 
 /* headings
 ----------------------------------------------- */
@@ -51,9 +52,10 @@ h1#branding {
 	font-weight:normal;
 	font-size:3em;
 	text-align:center;
-	background:#ddd;
+	background:#c9eaf3;
 	padding:.3em 1em;
 	margin-bottom:0;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
 }
 
 
@@ -66,31 +68,43 @@ h2#page-heading {
 	/*--border-bottom:1px solid #ccc;-- */
 }
 
+h5#page-heading {
+	color: #023392;
+	/*--border-bottom:1px solid #ccc;-- */
+}
+
 
 /* boxes
 ----------------------------------------------- */
 .box {
-	background:#ddd;
+	background:#fff;
 	margin-bottom:20px;
 	padding:10px 10px 1px 10px;
+	border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 .box h2 {
-	font-size:1em;
+	font-size:1.3em;
 	font-weight:normal;
 	text-transform:uppercase;
-	color:#fff;
-	background:#003399;
+	background:#fff;
 	margin:-10px -10px 0 -10px;
 	padding:6px 12px;
+	color: #023392;
+    font-family: 'BebasNeueRegular';
+	border-radius: 5px 5px 5px 5px;
 }
 .box h2 a,
 .box h2 a.visible {
-	color:#fff;
-	background:#003399 url("../img/switch_minus.gif") 97% 50% no-repeat;
+	color:#023392;
+	background:#fff url("../img/switch_minus.gif") 97% 50% no-repeat;
 	display:block;
 	padding:6px 12px;
 	margin:-6px -12px;
 	border:none;
+	font-family: 'BebasNeueRegular';
+	font-weight:normal;
+	border-radius: 5px 5px 5px 5px;
 }
 .grid_4 .box h2 a {
 	background-position: 97% 50%;
@@ -108,7 +122,7 @@ h2#page-heading {
 	background-image: url("../img/switch_plus.gif");
 }
 .box h2 a:hover {
-	background-color:#555;
+	background-color:#fff;
 }
 .block {
 	padding-top:10px;
@@ -419,7 +433,7 @@ input.search.button {
 ----------------------------------------------- */
 #site_info .box {
 	color:#333;
-	background:#ddd;
+	background:#fff;
 	margin-bottom:10px;
 }
 #site_info a {
@@ -483,7 +497,7 @@ input.search.button {
 }
 #kwick .kwicks {
 	display: block;
-	background: #999;
+	background: #c9eaf3;
 	list-style:none;
 	margin:0;
 	overflow:hidden;
@@ -504,17 +518,17 @@ input.search.button {
 }
 
 #kwick .kwick span {
-	color:#fff;
+	color:#023392;
 }
 #kwick .one {
-	background: #666;
+	background: #c9eaf3;
 }
 #kwick .two {
-	background: #777;
+	background: #c9eaf3;
 }
 #kwick .three {
-	background: #888;
+	background: #c9eaf3;
 }
 #kwick .four {
-	background: #999;
+	background: #c9eaf3;
 }

@@ -273,18 +273,26 @@
 			<script type="text/javascript">
 				$("#toggle-info").click(function () {
 				  $("#info").slideToggle("slow");
+				   if($("#toggle-info").hasClass("hidden")) {$("#toggle-info").removeClass("hidden");}
+				  else{$("#toggle-info").addClass("hidden");}
 				});
 				
 				$("#toggle-preparation").click(function () {
 				  $("#preparation").slideToggle("slow");
+				   if($("#toggle-preparation").hasClass("hidden")) {$("#toggle-preparation").removeClass("hidden");}
+				  else{$("#toggle-preparation").addClass("hidden");}
 				});
 				
 				$("#toggle-process").click(function () {
 				  $("#process").slideToggle("slow");
+				   if($("#toggle-process").hasClass("hidden")) {$("#toggle-process").removeClass("hidden");}
+				  else{$("#toggle-process").addClass("hidden");}
 				});
 				
 				$("#toggle-after").click(function () {
 				  $("#after").slideToggle("slow");
+				   if($("#toggle-after").hasClass("hidden")) {$("#toggle-after").removeClass("hidden");}
+				  else{$("#toggle-after").addClass("hidden");}
 				});
 			</script>				
 	</body>

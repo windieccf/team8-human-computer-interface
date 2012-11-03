@@ -84,6 +84,7 @@ ul.nav li.current:hover ul li a:active {color:#666; background:#fff;}
 ----------------------------------------------- */
 ul.nav {
   background:#FF6600;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
 }
 ul.main li {
   position:relative;
@@ -119,7 +120,7 @@ ul.main li ul li a:hover {
 }
 ul.main li:hover a {
   color:#fff;
-  background:#555;
+  background:#888;
 }
 ul.main li:hover ul li a {color:#fff;}
 ul.main li:hover ul li a:hover {color:#fff; background:#444;}
@@ -162,6 +163,6 @@ ul.nav li.secondary:hover a {
 	background:#666;
 }
 ul.nav li.secondary:hover a:hover {
-	background:#555;
+	background:#888;
 }
 ul.nav li.secondary:hover a:active {background:#444;}

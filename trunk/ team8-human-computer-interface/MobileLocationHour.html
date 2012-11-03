@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Location & Hours</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link rel="stylesheet" type="text/css" href="css/jquerymobile-1.2.0.css" media="screen" charset="utf-8" />
+		<style type="text/css">
+			input[type="text"]:disabled, textarea:disabled {
+				color: black;
+				border: none;
+				background-color: transparent;
+			}
+
+			.ui-mobile-viewport {
+				-webkit-tap-highlight-color: #FADB4E;
+			}
+
+			.ui-listview {
+				-webkit-tap-highlight-color: rgba(0,0,0,0);
+			}
+		</style>
+        <link rel="shortcut icon" type="image/png" href="/public/images/iphoneIcon.png" />
+		<link rel="apple-touch-icon" href="/public/images/iphoneIcon.png"/>
+		<link rel="apple-touch-startup-image" href="/public/images/iphoneStart.png">
+        <script type="text/javascript" language="javascript"  src="js/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript">
+			$(function(){
+				$('.ui-page-active #nomeeting').live('change', function(event){
+					var item = $(this);
+					var oldVal = item.data('oldVal');
+					var currVal = $(this).val();
+					if (oldVal == undefined || oldVal != currVal) {
+						if ("true" == currVal) {
+							$('.ui-page-active #nomeeting_reasons').slideDown();
+							$('.ui-page-active #meeting-details').slideUp();
+						} else {
+							$('.ui-page-active #nomeeting_reasons').slideUp();
+							$('.ui-page-active #meeting-details').slideDown();
+						}
+					}
+
+					item.data('oldVal', currVal);
+				});
+			});
+			$(document).bind("mobileinit", function(){
+				$.mobile.ajaxLinksEnabled = false;
+				$.mobile.ajaxFormsEnabled = false;
+				$.hideBrowserChrome = true;
+			});
+		</script>
+
+		<script type="text/javascript" language="javascript"  src="js/jquery.mobile-1.2.0.min.js"></script>
+	</head>
+     <body>
+			
+		<div data-role="page" id="home" data-theme="e">
+			<div data-role="header" data-theme="e">
+			<img src="img/NUSlogoMobile.png">
+			<h1>UHC e-Services</h1>
+			</div>
+			<div data-role="content" data-theme="e">
+			<div class="ui-grid-a" id="restau_infos">	
+				<div class="ui-block-a">
+				<h2> Open Hours</h2>
+				<p> Daily Open: </p>
+					<ul> 
+						<li> Mon-Thu 	8.30am - 6pm </li>
+						<li> Fri 	8.30am - 5.30pm  </li>
+						<li> Sat/Sun & PH 	Close </li>
+						<li> Lunch break 	12.30pm - 1.30pm </li>
+					</ul>	
+				</div>		
+				<div class="ui-block-b">
+				<p><img src="img/Hours.jpg" alt="hours photo"/></p>
+				<p><a href="http://www.google.fr" rel="external" data-role="button"> See our website </a></p>
+				</div>
+			</div><!-- /grid-a -->
+			<hr/>
+			
+			<div class="ui-grid-a" id="contact_infos">	
+				<div class="ui-block-a">
+				<h2> Contact us</h2>
+				<p>University Health Centre Level 1 </p>
+				<p> 20 Lower Kent Ridge Road Singapore 119080 </p>		
+				</div>		
+				<div class="ui-block-b">
+				<img src="img/MAP-KRC.jpg" alt="UHC"/>
+				</div>
+			</div><!-- /grid-a -->
+			<div id="contact_buttons">	
+				<a href="https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=National+University+Of+Singapore+Singapore&aq=1&oq=national+university+of+si&sll=37.0625,-95.677068&sspn=53.829089,79.013672&vpsrc=0&ie=UTF8&hq=National+University+Of+Singapore+Singapore&hnear=&radius=15000&ll=1.296105,103.780975&spn=0.134205,0.154324&t=m&z=13&iwloc=A&cid=5227844460917329259" data-role="button" data-icon="maps"> Find us on Google Maps </a> 	
+				<a href="tel:67761631"  data-role="button" data-icon="tel"> Call us </a>	
+			</div>	
+			<hr/>
+			</div>
+		</div>
+    </body>
+</html>

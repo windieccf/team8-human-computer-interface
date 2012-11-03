@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Login</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link rel="stylesheet" type="text/css" href="css/jquerymobile-1.2.0.css" media="screen" charset="utf-8" />
+		<style type="text/css">
+			input[type="text"]:disabled, textarea:disabled {
+				color: black;
+				border: none;
+				background-color: transparent;
+			}
+
+			.ui-mobile-viewport {
+				-webkit-tap-highlight-color: #FADB4E;
+			}
+
+			.ui-listview {
+				-webkit-tap-highlight-color: rgba(0,0,0,0);
+			}
+		</style>
+        <link rel="shortcut icon" type="image/png" href="/public/images/iphoneIcon.png" />
+		<link rel="apple-touch-icon" href="/public/images/iphoneIcon.png"/>
+		<link rel="apple-touch-startup-image" href="/public/images/iphoneStart.png">
+        <script type="text/javascript" language="javascript"  src="js/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript">
+			$(function(){
+				$('.ui-page-active #nomeeting').live('change', function(event){
+					var item = $(this);
+					var oldVal = item.data('oldVal');
+					var currVal = $(this).val();
+					if (oldVal == undefined || oldVal != currVal) {
+						if ("true" == currVal) {
+							$('.ui-page-active #nomeeting_reasons').slideDown();
+							$('.ui-page-active #meeting-details').slideUp();
+						} else {
+							$('.ui-page-active #nomeeting_reasons').slideUp();
+							$('.ui-page-active #meeting-details').slideDown();
+						}
+					}
+
+					item.data('oldVal', currVal);
+				});
+			});
+			$(document).bind("mobileinit", function(){
+				$.mobile.ajaxLinksEnabled = false;
+				$.mobile.ajaxFormsEnabled = false;
+				$.hideBrowserChrome = true;
+			});
+		</script>
+
+		<script type="text/javascript" language="javascript"  src="js/jquery.mobile-1.2.0.min.js"></script>
+	</head>
+     <body>
+			
+		<div data-role="page" id="home" data-theme="e">
+			<div data-role="header" data-theme="e">
+			<img src="img/NUSlogoMobile.png">
+			<h1>UHC e-Services</h1>
+			</div>
+			<div data-role="content" data-theme="e">
+				<h2>Please log in.</h2>
+				<form action="/m/login" method="post" accept-charset="utf-8" enctype="application/x-www-form-urlencoded" id="login_form" ><input type="hidden" name="authenticityToken" value="8cc1ff5d2e3c32cf48120d350c7739f2e5ffbd97">
+					<div data-role="fieldcontain">
+						<label for="username">UserID:</label>
+						<input type="text" id="username" name="username"  />
+
+						<label for="password">Password:</label>
+						<input type="password" id="password" name="password" />
+						
+							
+						<fieldset data-role="controlgroup">
+							<legend>Domain:</legend>
+							<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
+							<label for="radio-choice-1">NUSSTU</label>
+
+							<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2"  />
+							<label for="radio-choice-2">NUSSTF</label>
+						</fieldset>
+
+					</div>
+					<input type="submit" value="Login" data-theme="e"/>
+					<input type="hidden" name="logintype" value=""/>
+				</form>	
+			</div>
+		</div>
+    </body>
+</html>

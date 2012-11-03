@@ -2,12 +2,12 @@
 
 <html>
     <head>
-        <title>Services</title>
+        <title>Appointment</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<link rel="stylesheet" type="text/css" href="css/jquerymobile-1.2.0.css" media="screen" charset="utf-8" />
-
+		<link rel="stylesheet" type="text/css" href="css/jqm-datebox.min.css" media="screen" charset="utf-8" />
 		<style type="text/css">
 			input[type="text"]:disabled, textarea:disabled {
 				color: black;
@@ -54,25 +54,74 @@
 		</script>
 
 		<script type="text/javascript" language="javascript"  src="js/jquery.mobile-1.2.0.min.js"></script>
+		<script type="text/javascript" language="javascript"  src="js/jqm-datebox.core.min.js"></script>
+		<script type="text/javascript" language="javascript"  src="js/jqm-datebox.mode.calbox.js"></script>
+		<script type="text/javascript" language="javascript"  src="js/jqm-datebox.mode.flipbox.min.js"></script>
+		
 	</head>
      <body>
 			
 		<div data-role="page" id="home" data-theme="e">
 			<div data-role="header" data-theme="e">
-			<img src="img/NUSlogoMobile.png">
+			
+			<a href="./MobileDoctorList.html">Back</a>
 			<h1>UHC e-Services</h1>
+			<a href="./MobileLogin.html">Logout</a>
 			</div>
 			<div data-role="content" data-theme="e">
-					<div class="choice_list"> 
-					<h1> What would you'd like to do? </h1>
-					
-					<ul data-role="listview" data-inset="true" >
-					<li><a href="./MobileLocationHour.html" data-transition="slidedown"> <img src="img/location.png"/> <h3> Location & Hours </h3></a></li>
-					<li><a href="./MobileDoctorList.html"  data-transition="slidedown"> <img src="img/doctor_menu.jpg"/> <h3> Health Physicians  </h3></a></li>
-					<li><a href="./MobileAppt.html"  data-transition="slidedown"> <img src="img/calendar.jpg"/> <h3> Appointment </h3></a></li>	
-					</ul>	
-					
-					</div>
+			<div>	
+			
+				<h2> Appointment Details</h2>
+				<p> 
+					<label for="mydate">Date</label>
+
+					<input name="mydate" id="mydate" type="date" data-role="datebox"
+					data-options='{"mode": "calbox", "calUsePickers": true, "calNoHeader": true}'> 
+				</p>
+				
+				
+				<p> 
+					<label for="mydate">Time</label>
+
+					<input name="mydate" id="mydate" type="date" data-role="datebox"
+					data-options='{"mode": "timeflipbox"}'> 
+				</p>
+				
+				
+				
+			</div>
+			<hr/>
+			
+			<div>	
+			
+				<h2> Personal Details</h2>
+				<p> 
+					<label for="number">Contact No.</label>
+
+					<input type="text" name="number" id="basic" value=""  />
+				</p>
+				
+				
+					<p> 
+					<label for="address">Address</label>
+
+					<input type="text" name="address" id="basic" value=""  />
+				</p>
+				
+				</p>
+				
+				
+					<p> 
+					<label for="diagnose">Diagnose</label>
+
+					<textarea name="diagnose" id="textarea"></textarea>
+				</p>
+				
+				
+				
+			</div>
+			<a href="./MobileServices.html" data-role="button" data-inline="true">Cancel</a>
+			<a href="./MobileAppt.html" data-role="button" data-inline="true" data-theme="b">Submit</a>
 			</div>
 		</div>
     </body>

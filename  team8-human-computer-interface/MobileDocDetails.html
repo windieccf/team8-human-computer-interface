@@ -2,12 +2,11 @@
 
 <html>
     <head>
-        <title>Services</title>
+        <title>Doctor Details</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<link rel="stylesheet" type="text/css" href="css/jquerymobile-1.2.0.css" media="screen" charset="utf-8" />
-
 		<style type="text/css">
 			input[type="text"]:disabled, textarea:disabled {
 				color: black;
@@ -59,20 +58,50 @@
 			
 		<div data-role="page" id="home" data-theme="e">
 			<div data-role="header" data-theme="e">
-			<img src="img/NUSlogoMobile.png">
+			
+			<a href="./MobileDoctorList.html">Back</a>
 			<h1>UHC e-Services</h1>
+			<a href="./MobileLogin.html">Logout</a>
 			</div>
 			<div data-role="content" data-theme="e">
-					<div class="choice_list"> 
-					<h1> What would you'd like to do? </h1>
-					
-					<ul data-role="listview" data-inset="true" >
-					<li><a href="./MobileLocationHour.html" data-transition="slidedown"> <img src="img/location.png"/> <h3> Location & Hours </h3></a></li>
-					<li><a href="./MobileDoctorList.html"  data-transition="slidedown"> <img src="img/doctor_menu.jpg"/> <h3> Health Physicians  </h3></a></li>
-					<li><a href="./MobileAppt.html"  data-transition="slidedown"> <img src="img/calendar.jpg"/> <h3> Appointment </h3></a></li>	
-					</ul>	
-					
-					</div>
+			<div class="ui-grid-a" id="restau_infos">	
+				<div class="ui-block-a">
+				<h2> Catherine CHUA</h2>
+				<p> Director UHC </p>
+				<p> Email:vuhchead@nus.edu.sg </p>
+				<p> Phone No.: 6516 2389  </p>
+				</div>		
+				<div class="ui-block-b">
+				<p><img src="img/doctorMobile.png" alt="hours photo"/></p>
+				<p><a href="http://www.google.fr" rel="external" data-role="button"> Visit my blog </a></p>
+				</div>
+			</div><!-- /grid-a -->
+			<hr/>
+			
+			<div data-role="collapsible" data-theme="e" data-content-theme="d">
+			   <h3>Specialties</h3>
+			   <p>Family Practice - Board Certified</p>
+			</div>
+			<div data-role="collapsible" data-theme="e" data-content-theme="d">
+			   <h3>Education</h3>
+			   <p>Graduated in 2001, West Virginia School of Osteopathic Medicine</p>
+			</div>
+			<div data-role="collapsible" data-theme="e" data-content-theme="d">
+			   <h3>Procedures Performed</h3>
+			   <p>
+					<ul>
+						<li>Colonoscopy</li>
+						<li>Hemorrhoidectomy</li>
+						<li>Esophagoscopy</li>
+						<li>Esophagogastroduodenoscopy</li>
+						<li>Cesarean Section</li>
+					</ul>
+				</p>
+			</div>
+			<div data-role="collapsible" data-theme="e" data-content-theme="d">
+			   <h3>Awards and Recognitions</h3>
+			   <p>Dr. Chua is a Healthgrades Recognized Doctor</p>
+			</div>
 			</div>
 		</div>
     </body>

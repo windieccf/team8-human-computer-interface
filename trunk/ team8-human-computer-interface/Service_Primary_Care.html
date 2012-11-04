@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>University Health Centre | Appointment</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/text.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/grid.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/layout.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/nav.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/nav.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.9.1.custom.min.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/fullcalendar.css" media="screen" />
+		<!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
+		<!--[if lte IE 6]>
+             <link rel="stylesheet" href="css/styleIE6.css" type="text/css" media="screen"/>
+        <![endif]-->
+		<style>
+			fieldset.login p select,#physicians {
+				width: 61%;
+			}
+			#calendar {
+				width: 600px;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container_16">
+			<div class="grid_16">
+				<h1 id="branding">
+					<img src="img/NUS.jpg" width="951" height="85" align="top">
+				</h1>
+			</div>
+			<div class="clear"></div>
+			<div class="grid_16">
+				<ul class="nav main">
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">About</a>
+					</li>
+					<li>
+						<a href="#">Services</a>
+						<ul>
+							<li>
+								<a href="#">Appointment</a>
+							</li>
+							<li>
+								<a href="#">Medical Screening</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Insurance Schemes</a>
+					</li>
+					<li>
+						<a href="#">Fees & Charges</a>
+					</li>
+					<li>
+						<a href="#">Health Matters</a>
+					</li>
+					<li class="secondary">
+						<a href="http://960.gs/">中文</a>
+					</li>
+					<li class="secondary">
+						<a href="http://960.gs/">English</a>
+					</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+			<div class="grid_12">
+				<br/>
+				<h5 id="page-heading">University Health Centre > Services</h5>
+			</div>
+			<div class="grid_4"><h2 id="page-heading">
+				<form method="get" action="" class="search">
+						<input class="search text" name="value" type="text" />
+						<img src="img/search.png" width="20" height="20" align="top"> 
+				</form></h2>
+			</div>
+			<div class="clear"></div>
+			<div class="grid_4">
+				<div class="box">
+					<h2>
+						<a href="#" id="toggle-info">Important Informations</a>
+					</h2>
+					<div class="block" id="info">
+						<fieldset>
+							<legend>Pharmacy</legend>
+							<p class="notice">All Undergraduates and Postgraduates matriculating are required to complete their medical examination before entering the university. The screening will be performed at the University Health Centre.</p>
+							<p class="notice">Candidates who accepted the offer from Medicine, Dentistry or Nursing must also be screened for immunity to Hepatitis B, Chickenpox and Rubella. .</p>				
+						</fieldset>
+						<fieldset>
+							<legend>Dental</legend>
+							<p class="notice">For appointments, please call 6773 1613. <br><a href="#">View Location Map</a></p>
+						</fieldset>
+				  </div>
+				</div>
+			</div>
+			<div class="grid_12">
+				<div class="box">
+					<h2>
+						<a href="#" id="toggle-preparation">What You Need to Prepare</a>
+					</h2>
+					<div class="block" id="preparation">
+						<fieldset>
+							<legend>Primary Care</legend>
+							<p class="notice"><br />
+We provide primary care and specialize in family medicine.<br />
+<br />
+Our services range from                 management of acute and chronic illnesses, immunization, health screening and                 vaccination, medical check-up, minor procedures and treatments, x-ray and laboratory                 services. <br />
+<br />
+We are equipped with the following modern facilities: <br />
+<br />
+• 7 General Consultation Rooms <br />
+• 3 Specialist Rooms <br />
+• 1 Counselling Room <br />
+• 1 Physiotherapy Room <br />
+• 1 Treatment Room <br />
+• 1 Isolation Room <br />
+• Pharmacy <br />
+• Laboratory <br />
+• X-Ray (Tue/Wed/Thu:           9am - 11.30am / 1.30pm to 5pm)</p>
+					  </fieldset>
+				  </div>
+				</div>
+	</div>
+			<div class="clear"></div>					
+			<div class="grid_16" id="site_info">
+				<div class="box">
+					<p>© Copyright 2001-2012 National University of Singapore. All Rights Reserved. </p>
+				</div>
+			</div>
+			
+			<!-- The JavaScript -->
+			<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+			<script type="text/javascript" src="js/jquery-ui-1.9.1.custom.min.js"></script>
+			<script type="text/javascript" src="js/fullcalendar.min.js"></script>
+			
+			<script type="text/javascript">
+				$("#toggle-info").click(function () {
+				  $("#info").slideToggle("slow");
+				   if($("#toggle-info").hasClass("hidden")) {$("#toggle-info").removeClass("hidden");}
+				  else{$("#toggle-info").addClass("hidden");}
+				});
+				
+				$("#toggle-preparation").click(function () {
+				  $("#preparation").slideToggle("slow");
+				   if($("#toggle-preparation").hasClass("hidden")) {$("#toggle-preparation").removeClass("hidden");}
+				  else{$("#toggle-preparation").addClass("hidden");}
+				});
+				
+				$("#toggle-process").click(function () {
+				  $("#process").slideToggle("slow");
+				   if($("#toggle-process").hasClass("hidden")) {$("#toggle-process").removeClass("hidden");}
+				  else{$("#toggle-process").addClass("hidden");}
+				});
+				
+				$("#toggle-after").click(function () {
+				  $("#after").slideToggle("slow");
+				   if($("#toggle-after").hasClass("hidden")) {$("#toggle-after").removeClass("hidden");}
+				  else{$("#toggle-after").addClass("hidden");}
+				});
+			</script>				
+	</body>
+</html>

@@ -113,10 +113,23 @@
 			<div class="grid_12">
 				<div class="box">
 					<h2>
-						<a href="#" id="toggle-preparation">What You Need to Prepare</a>
+						<a href="#" id="toggle-preparation">Special Clinic</a>
 					</h2>
 					<div class="block" id="preparation">
-					  <fieldset><div id="calendar"></div></fieldset>
+					  <fieldset>
+					  <p><label>Specialist Services: </label>
+							<select name="services" id="select-services">
+										<option value="">Select Services...</option>
+										<option value="Psychiatry">Psychiatry</option>
+										<option value="Physiotherapy">Physiotherapy</option>
+										<option value="Ophthalmology">Ophthalmology</option>
+										<option value="Optometry">Optometry</option>
+										<option value="Ear Nose Throat">Ear Nose Throat</option>
+										<option value="Sports Orthopaedics">Sports Orthopaedics</option>
+							</select>		
+						</p>
+					  <div id="calendar"></div>
+					  </fieldset>
 				  </div>
 				</div>
 	</div>
@@ -217,16 +230,170 @@
 							events: [
 								{
 									id: 999,
-									title: 'Appointment',
-									start: new Date(y, m, d+3, 11, 0),
-									end: new Date(y, m, d+3, 11, 30),
+									title: 'Psychiatry (Dr Ko Soo Meng)',
+									start: new Date(y, m, d+3, 13, 30),
+									end: new Date(y, m, d+3, 17, 00),
 									allDay: false
 								},
 								{
 									id: 999,
-									title: 'Appointment',
-									start: new Date(y, m, d+2, 16, 0),
-									end: new Date(y, m, d+2, 16, 30),
+									title: 'Psychiatry(Dr Julia Tan Kuan Hoo)',
+									start: new Date(y, m, d+4, 08, 30),
+									end: new Date(y, m, d+4, 12, 00),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Psychiatry (Dr Ko Soo Meng)',
+									start: new Date(y, m, d+5, 13, 30),
+									end: new Date(y, m, d+5, 17, 00),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Psychiatry(Dr Julia Tan Kuan Hoo)',
+									start: new Date(y, m, d+6, 08, 30),
+									end: new Date(y, m, d+6, 12, 00),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Psychiatry (Dr Ko Soo Meng)',
+									start: new Date(y, m, d+6, 13, 30),
+									end: new Date(y, m, d+6, 17, 00),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Psychiatry(Dr Julia Tan Kuan Hoo)',
+									start: new Date(y, m, d+7, 08, 30),
+									end: new Date(y, m, d+7, 12, 00),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Psychiatry (Dr Ko Soo Meng)',
+									start: new Date(y, m, d+8, 13, 30),
+									end: new Date(y, m, d+8, 17, 00),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Psychiatry(Dr Julia Tan Kuan Hoo)',
+									start: new Date(y, m, d+9, 08, 30),
+									end: new Date(y, m, d+9, 12, 00),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Psychiatry (Dr Ko Soo Meng)',
+									start: new Date(y, m, d+10, 13, 30),
+									end: new Date(y, m, d+10, 17, 00),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Psychiatry(Dr Julia Tan Kuan Hoo)',
+									start: new Date(y, m, d+11, 08, 30),
+									end: new Date(y, m, d+11, 12, 00),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Psychiatry (Dr Ko Soo Meng)',
+									start: new Date(y, m, d+12, 13, 30),
+									end: new Date(y, m, d+12, 17, 00),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Psychiatry(Dr Julia Tan Kuan Hoo)',
+									start: new Date(y, m, d+13, 08, 30),
+									end: new Date(y, m, d+13, 12, 00),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Psychiatry (Dr Ko Soo Meng)',
+									start: new Date(y, m, d-3, 13, 30),
+									end: new Date(y, m, d-3, 17, 00),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Psychiatry(Dr Julia Tan Kuan Hoo)',
+									start: new Date(y, m, d-4, 08, 30),
+									end: new Date(y, m, d-4, 12, 00),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Psychiatry (Dr Ko Soo Meng)',
+									start: new Date(y, m, d-5, 13, 30),
+									end: new Date(y, m, d-5, 17, 00),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Psychiatry(Dr Julia Tan Kuan Hoo)',
+									start: new Date(y, m, d-6, 08, 30),
+									end: new Date(y, m, d-6, 12, 00),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Psychiatry (Dr Ko Soo Meng)',
+									start: new Date(y, m, d-6, 13, 30),
+									end: new Date(y, m, d-6, 17, 00),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Psychiatry(Dr Julia Tan Kuan Hoo)',
+									start: new Date(y, m, d-7, 08, 30),
+									end: new Date(y, m, d-7, 12, 00),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Psychiatry (Dr Ko Soo Meng)',
+									start: new Date(y, m, d-8, 13, 30),
+									end: new Date(y, m, d-8, 17, 00),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Psychiatry(Dr Julia Tan Kuan Hoo)',
+									start: new Date(y, m, d-9, 08, 30),
+									end: new Date(y, m, d-9, 12, 00),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Psychiatry (Dr Ko Soo Meng)',
+									start: new Date(y, m, d-10, 13, 30),
+									end: new Date(y, m, d-10, 17, 00),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Psychiatry(Dr Julia Tan Kuan Hoo)',
+									start: new Date(y, m, d-11, 08, 30),
+									end: new Date(y, m, d-11, 12, 00),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Psychiatry (Dr Ko Soo Meng)',
+									start: new Date(y, m, d-12, 13, 30),
+									end: new Date(y, m, d-12, 17, 00),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Psychiatry(Dr Julia Tan Kuan Hoo)',
+									start: new Date(y, m, d-13, 08, 30),
+									end: new Date(y, m, d-13, 12, 00),
 									allDay: false
 								}
 							]

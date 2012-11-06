@@ -116,89 +116,7 @@
 						<a href="#" id="toggle-preparation">What You Need to Prepare</a>
 					</h2>
 					<div class="block" id="preparation">
-					  <fieldset>
-							<legend>Specialist Clinic </legend>
-							<p class="notice"><table bgcolor="#C7D9EA" border="0" cellpadding="3" cellspacing="1" width="369">
-                <tbody><tr class="mChar" bgcolor="#F0FAFF">
-                  <td bgcolor="#FFFFFF" width="40">&nbsp;</td>
-                  <td align="center" valign="top" width="122"><strong>AM</strong></td>
-                  <td align="center" valign="top" width="185"><strong>PM</strong></td>
-                </tr>
-                <tr bgcolor="#FFFFFF">
-                  <td class="mGreen" align="center" bgcolor="#F0FAFF" valign="middle"><strong class="mChar">MON</strong></td>
-                  <td class="mChar" align="left" bgcolor="#F7F7F7" valign="middle">&nbsp;</td>
-                  <td class="mChar" align="left" bgcolor="#FFFFFF" valign="middle"><strong>Psychiatry</strong><br>
-      Dr Ko Soo Meng<br>
-      1.30pm - 5.00pm</td>
-                </tr>
-                <tr bgcolor="#FFFFFF">
-                  <td class="mChar" align="center" bgcolor="#F0FAFF" valign="middle"><strong>TUE</strong></td>
-                  <td class="mChar" align="left" bgcolor="#FFFFFF" valign="middle">&nbsp;<strong>Physiotherapy</strong><br>
-      9.30am - 3.00pm<br>
-      ....................................... <br>
-					<strong>Psychiatry</strong><br>
-      			DrJulia Tan Kuan Hoo<br>
-      			8.30am - 12.00noon</td>
-                  <td class="mChar" align="left" bgcolor="#FFFFFF" valign="middle">
-					<strong>Psychiatry</strong><br>
-      Dr R Nagulendran<br>
-      2pm - 5.15pm<br>
-      ....................................... <br>
-      <strong>Ophthalmology<br>
-					</strong>Dr Joy Chan<br>      
-      2.30pm - 4.30pm<br>
-      ....................................... <br>
-      <strong>Optometry</strong><br>
-      Mr Yap Tiong Peng <br>
-      				By appointment basis (Tel: 6732 3233) </td>
-                </tr>
-                <tr bgcolor="#FFFFFF">
-                  <td class="mGreen" align="center" bgcolor="#F0FAFF" valign="middle"><strong class="mChar">WED</strong></td>
-                  <td class="mChar" align="left" bgcolor="#FFFFFF" valign="middle"><strong>Ear Nose Throat</strong><br>
-      Dr Pang Yoke Teen<br>
-      8.30am - 10.00am<br>      
-      ....................................... <br>
-      <strong>Physiotherapy</strong><br>
-      9.30am - 3.00pm<br>
-      ....................................... <strong>Sports Orthopaedics</strong><br>
-      			Dr Tan Ken Jin<br>
-      			10.30am - 12.15pm</td>
-                  <td class="mChar" align="left" bgcolor="#FFFFFF" valign="middle"><strong>Psychological Counselling (Staff)</strong><br>
-      Mr Adrian Lau<br>
-      1.30pm - 4.30pm<br>
-      .......................................<strong><br>
-					Physiotherapy</strong><br>
-      			1.30pm - 4.30pm</td>
-                </tr>
-                <tr bgcolor="#FFFFFF">
-                  <td class="mGreen" align="center" bgcolor="#F0FAFF" valign="middle"><strong class="mChar">THU</strong></td>
-                  <td class="mChar" align="left" bgcolor="#FFFFFF" valign="middle"><strong>Sports Orthopaedics</strong><br>
-      Dr Ang Kian Chuan<br>
-      9.30am - 11.30am<br>
-      ....................................... <br>
-      <strong>Physiotherapy</strong><br>
-      9.30am - 3.00pm<br>
-      .......................................<br>
-					<strong>Psychiatry</strong><br>
-      			DrJulia Tan Kuan Hoo<br>
-      			8.30am - 12.00noon </td>
-                  <td class="mChar" align="left" bgcolor="#FFFFFF" valign="middle"><strong>Psychiatry</strong><br>
-      Dr R Nagulendran<br>
-      2pm - 5.15pm</td>
-                </tr>
-                <tr bgcolor="#FFFFFF">
-                  <td class="mGreen" align="center" bgcolor="#F0FAFF" valign="middle"><strong class="mChar">FRI</strong></td>
-                  <td class="mChar" align="left" bgcolor="#FFFFFF" valign="middle">&nbsp;</td>
-                  <td class="mChar" align="left" bgcolor="#FFFFFF" valign="middle"><strong>Psychological Counselling (Staff) </strong><br>
-      Mr Adrian Lau<br>
-      1.30pm - 4.30pm<br>
-      ....................................... <br>
-      <strong>Psychiatry</strong><br>
-      Dr Ko Soo Meng<br>
-      1.30pm - 4.40pm</td>
-                </tr>
-            </tbody></table></p>
-					  </fieldset>
+					  <fieldset><div id="calendar"></div></fieldset>
 				  </div>
 				</div>
 	</div>
@@ -215,29 +133,106 @@
 			<script type="text/javascript" src="js/fullcalendar.min.js"></script>
 			
 			<script type="text/javascript">
-				$("#toggle-info").click(function () {
-				  $("#info").slideToggle("slow");
-				   if($("#toggle-info").hasClass("hidden")) {$("#toggle-info").removeClass("hidden");}
-				  else{$("#toggle-info").addClass("hidden");}
+				$("#toggle-forms").click(function () {
+				  $("#forms").slideToggle("slow");
+				  if($("#toggle-forms").hasClass("hidden")) {$("#toggle-forms").removeClass("hidden");}
+				  else{$("#toggle-forms").addClass("hidden");}
 				});
 				
-				$("#toggle-preparation").click(function () {
-				  $("#preparation").slideToggle("slow");
-				   if($("#toggle-preparation").hasClass("hidden")) {$("#toggle-preparation").removeClass("hidden");}
-				  else{$("#toggle-preparation").addClass("hidden");}
+				$("#toggle-login-forms").click(function () {
+				  $("#login-forms").slideToggle("slow");
+				  if($("#toggle-login-forms").hasClass("hidden")) {$("#toggle-login-forms").removeClass("hidden");}
+				  else{$("#toggle-login-forms").addClass("hidden");}
 				});
 				
-				$("#toggle-process").click(function () {
-				  $("#process").slideToggle("slow");
-				   if($("#toggle-process").hasClass("hidden")) {$("#toggle-process").removeClass("hidden");}
-				  else{$("#toggle-process").addClass("hidden");}
+				$("#select-services").change(function () {
+				  $("#physicians").slideDown("fast");
+
 				});
 				
-				$("#toggle-after").click(function () {
-				  $("#after").slideToggle("slow");
-				   if($("#toggle-after").hasClass("hidden")) {$("#toggle-after").removeClass("hidden");}
-				  else{$("#toggle-after").addClass("hidden");}
+				$( "#dialog-form" ).dialog({
+					autoOpen: false,
+					height: 600,
+					width: 1100,
+					modal: true,
+					buttons: {
+						"Book": function() {
+							$("#timeSlots").slideToggle("slow");
+							$( this ).dialog( "close" );
+						},
+						Cancel: function() {
+							$( this ).dialog( "close" );
+							$('#calendar').fullCalendar( 'destroy' )
+						}
+					},
+					close: function() {
+						$( this ).dialog( "close" );
+						$('#calendar').fullCalendar( 'destroy' )
+					}
 				});
-			</script>				
+		 
+				$(document).ready(function() {
+						$( "#dialog-form" ).dialog( "open" );
+						var date = new Date();
+						var d = date.getDate();
+						var m = date.getMonth();
+						var y = date.getFullYear();
+						
+						var calendar = $('#calendar').fullCalendar({
+							header: {
+								left: 'next today',
+								center: 'title'
+							},
+							defaultView: 'agendaWeek',
+							selectable: true,
+							selectHelper: true,
+							minTime: '9:00',
+							maxTime: '18:00', 
+							weekends: false,
+							allDaySlot: false,
+							year: y,
+							month: m,
+							date: d+3,
+							select: function(start, end, allDay) {
+								var title = prompt('Please enter NRIC to confirm:');
+								if (title) {
+									calendar.fullCalendar('renderEvent',
+										{
+											id: 999,
+											start: start,
+											title: 'Appointment',
+											end: end,
+											allDay: allDay
+										},
+										true // make the event "stick"
+									);
+										
+								}
+								calendar.fullCalendar('unselect');
+								
+								$( "#timeSlots" ).append('<p>Your booking time is shown as below: </p>' + 
+								$.fullCalendar.formatDate(start,'dd/MMM/yyyy hh:ss'));
+							},
+							editable: false,
+							events: [
+								{
+									id: 999,
+									title: 'Appointment',
+									start: new Date(y, m, d+3, 11, 0),
+									end: new Date(y, m, d+3, 11, 30),
+									allDay: false
+								},
+								{
+									id: 999,
+									title: 'Appointment',
+									start: new Date(y, m, d+2, 16, 0),
+									end: new Date(y, m, d+2, 16, 30),
+									allDay: false
+								}
+							]
+						});
+				});
+				
+			</script>						
 	</body>
 </html>

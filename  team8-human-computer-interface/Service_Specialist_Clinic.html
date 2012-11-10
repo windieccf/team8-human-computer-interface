@@ -50,6 +50,9 @@
 								<a href="Service_Specialist_Clinic.html">Specialist Clinic</a>
 							</li>
 							<li>
+								<a href="Appointment.html">Appointment</a>
+							</li>
+							<li>
 								<a href="EnrollmentCheckup.html">Pre-Admission Medical Exam</a>
 							</li>
 							<li>
@@ -112,6 +115,7 @@
 							<legend>Services</legend>
 							<p class="notice"><a href="Service_Primary_Care.html">Primary Care</a></p>
 							<p class="notice"><a href="Service_Specialist_Clinic.html">>> Specialist Clinic</a></p>
+							<p class="notice"><a href="Appointment.html">Appointment</a></p>
 							<p class="notice"><a href="EnrollmentCheckup.html">Pre-Admission Medical Exam</a></p>	
 							<p class="notice"><a href="Service_Other_Contact.html">Other Clinic Contacts</a></p>	
 						</fieldset>
@@ -215,7 +219,7 @@
 					height: 600,
 					width: 1100,
 					modal: true,
-					buttons: {
+					/*buttons: {
 						"Book": function() {
 							$("#timeSlots").slideToggle("slow");
 							$( this ).dialog( "close" );
@@ -224,7 +228,7 @@
 							$( this ).dialog( "close" );
 							$('#calendar').fullCalendar( 'destroy' )
 						}
-					},
+					},*/
 					close: function() {
 						$( this ).dialog( "close" );
 						$('#calendar').fullCalendar( 'destroy' )
@@ -463,7 +467,7 @@
 								center: 'title'
 							},
 							defaultView: 'agendaWeek',
-							selectable: true,
+							selectable: false,
 							selectHelper: true,
 							minTime: '9:00',
 							maxTime: '18:00', 

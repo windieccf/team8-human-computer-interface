@@ -54,7 +54,7 @@ window.addEvent('domready', function() {
 		$('kwick').addEvent('mouseleave', function(e){
 			var obj = {};
 			kwicks.each(function(other, j){
-				obj[j] = {'width': [other.getStyle('width').toInt(), 175]};
+				obj[j] = {'width': [other.getStyle('width').toInt(), 185]};
 			});
 			fx.start(obj);
 		});

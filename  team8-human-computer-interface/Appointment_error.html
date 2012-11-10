@@ -122,7 +122,8 @@
 						</fieldset>
 						<fieldset>
 							<legend>Register Info</legend>
-							<p id="timeSlots" style="display: none"></p>
+							
+							<p>Your booking time is shown as below: </p>21/NOV/2012 13:00
 						</fieldset>
 					</div>
 				</div>
@@ -183,24 +184,24 @@
 							<fieldset>
 								<legend>Personal Information</legend>
 								<p>
-									<label>First Name: </label><span style="color:red">*</span>
+									<label>First Name: </label><span style="color:red">* <b>Please fill in First Name.</b></span>
 									<input type="text" name="first-name" value="" />
 								</p>
 								<p>
 									<label>Last Name: </label><span style="color:red">*</span>
-									<input type="text" name="last-name" value="" />
+									<input type="text" name="last-name" value="Tan" />
 								</p>
 								<p>
 									<label>Address: </label>
-									<input type="text" name="address1" value="" />
+									<input type="text" name="address1" value="Yi shun Street 61" />
 								</p>
 								<p>
 									<label>Address 2: </label>
-									<input type="text" name="address2" value="" />
+									<input type="text" name="address2" value="#08 - 294" />
 								</p>
 								<p>
 									<label>City: </label>
-									<input type="text" name="city" value="" />
+									<input type="text" name="city" value="Singapore" />
 								</p>
 								<p>
 									<label>State/Province: </label>
@@ -260,6 +261,7 @@
 										<option value="SK">Saskatchewan </option>
 										<option value="SC">South Carolina </option>
 										<option value="SD">South Dakota </option>
+										<option value="SG" selected='true'>Singapore</option>
 										<option value="TN">Tennessee </option>
 										<option value="TX">Texas </option>
 										<option value="UT">Utah </option>
@@ -276,21 +278,22 @@
 									<label>Country: </label>
 									<select name="Country">
 										<option value="">Select Country...</option>
+										<option value="SG" selected>Singapore</option>
 										<option value="Canada">Canada</option>
 										<option value="United States">United States</option>
 									</select>
 								</p>
 								<p>
 									<label>Zip/Postal Code: </label>
-									<input type="text" name="zipcode" value="" />
+									<input type="text" name="zipcode" value="760644" />
 								</p>
 								<p>
 									<label>Phone Number: </label><span style="color:red">*</span>
-									<input type="text" name="phone" value="" />
+									<input type="text" name="phone" value="9001 1234" />
 								</p>
 								<p>
 									<label>Email Address: </label><span style="color:red">*</span>
-									<input type="text" name="email" value="" />
+									<input type="text" name="email" value="nusstu@nus.edu.sg" />
 								</p>
 								<input type="submit" value="Booking" class="register-button" />
 							</fieldset>
